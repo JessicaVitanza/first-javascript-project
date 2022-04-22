@@ -2,7 +2,7 @@
    
 //scrivere un ciclo for che scriva a console i numeri da 10 a 50
 
-for(let i = 10; i <= 50; i++){
+for(let i = 10; i < 51; i++){
     console.log(i);
 }
 
@@ -95,8 +95,13 @@ console.log(somma);
 
 //scivere un ciclo while che si interrompa quando l'utente scrive 'esci'nella finestra di dialogo
 
-let check = true;
-while(check){
-    const user_input = prompt('Scrivi "esci" per uscire dal loop');
-    if(user_input === 'esci') check = false;
+// while (prompt('scrivi "esci" per uscire dal ciclo') !== 'esci') {}
+
+
+while (true) {
+
+    let extix = prompt('inserire "esci":');
+    if (extix === 'esci') {
+        break;
+    }
 }
