@@ -86,53 +86,107 @@
 //se il valore è più di 5 ritorno a 0 altrimenti 1
 
 
-function elaboraDato(dato) {
-    const datoArrotondato = Math.round(dato);
+// function elaboraDato(dato) {
+//     const datoArrotondato = Math.round(dato);
 
-    const datoArrotondatoAllaSeconda = datoArrotondato ** 2;
+//     const datoArrotondatoAllaSeconda = datoArrotondato ** 2;
 
-    let datoDopoSoglia = controllaSoglia(datoArrotondatoAllaSeconda);
+//     let datoDopoSoglia = controllaSoglia(datoArrotondatoAllaSeconda);
 
-//     let datoDopoSoglia; 
-//     if (datoArrotondatoAllaSeconda > 10) {
-// datoDopoSoglia = 10;
+// //     let datoDopoSoglia; 
+// //     if (datoArrotondatoAllaSeconda > 10) {
+// // datoDopoSoglia = 10;
+// //     } else {
+// //         datoDopoSoglia = datoArrotondatoAllaSeconda;
+// //     }
+
+//     if (datoDopoSoglia > 5) {
+//         return 0;
 //     } else {
-//         datoDopoSoglia = datoArrotondatoAllaSeconda;
+//         return 1;
 //     }
+// }
 
-    if (datoDopoSoglia > 5) {
-        return 0;
-    } else {
-        return 1;
-    }
+
+// function controllaSoglia(numero) {
+//     if (numero > 10) {
+//         return 10;
+//     } else {
+//         return numero;
+//     }
+// }
+
+
+// const dato1 = 3.4;
+
+// const risultato1 = elaboraDato(dato1);
+
+// console.log(risultato1);
+
+
+
+// const dato2 = 27;
+
+// const risultato2 = elaboraDato(dato2);
+
+// console.log(risultato2);
+
+// const dato3 = 1.5;
+
+// const risultato3 = elaboraDato(dato3);
+
+// console.log(risultato3);
+
+//_________________________________________________________________________________________________
+
+function dividi(dividendo, divisore = 2) {
+
+    // if (!dividendo) {
+    //     return "mi serve il dividendo"
+    // }
+
+    // if (!divisore) {
+    //     divisore = 2;
+    // } 
+
+    const quoziente = dividendo / divisore;
+    return quoziente;
 }
 
+const risultato = dividi(8, 2);
+console.log("due parametri", risultato); 
+console.log("--------------");
+const risultato2 = dividi(8);
+console.log("un parametro", risultato2);
+console.log("--------------");
+const risultato3 = dividi ();
+console.log("zero parametri", risultato3);
 
-function controllaSoglia(numero) {
-    if (numero > 10) {
-        return 10;
-    } else {
-        return numero;
-    }
+
+// let numeroInStringa = "52";
+
+// let numero = parseInt(numeroInStringa, 10);
+
+//___________________________________funzioni anonime______________________________________________
+
+const aggiungiUnoAnonima = function (numero) {
+    return numero + 1
 }
 
+const risultato4 = aggiungiUnoAnonima(5);
 
-const dato1 = 3.4;
+console.log("funzione anonima", risultato4);
 
-const risultato1 = elaboraDato(dato1);
+//________________________________funzioni anonime______________________________________________
 
-console.log(risultato1);
+const aggiungiUnoLambda = (numero) => numero + 1
 
+const risultato5 = aggiungiUnoLambda(8);
 
+console.log("funzione lambda", risultato5);
 
-const dato2 = 27;
+//______________________________________standard____________________________________________
 
-const risultato2 = elaboraDato(dato2);
-
-console.log(risultato2);
-
-const dato3 = 1.5;
-
-const risultato3 = elaboraDato(dato3);
-
-console.log(risultato3);
+function aggiungiUno(numero) {
+    return numero + 1
+}
