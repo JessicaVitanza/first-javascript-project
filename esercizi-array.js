@@ -66,28 +66,37 @@ const newArray3 = [];
 
 //____________________________________________________________________________________________
 
-function firstUpperCase(array) {
-    // const newArray= [];
+function firstUpperCase(array) { 
+    let newArray = []
+    for (const string of array) {
+        newArray.push(string.charAt(0).toUpperCase() + string.slice(1))
+    }
+    return newArray
+}
 
-    // for (const element of array) {
-    //     const uppercaseString = element.toUpperCase ();
-    //     newArray.push(uppercaseString);
-    // }
-    // return newArray;
-} 
    console.log(firstUpperCase(testArray2));  ///  tutte le iniziali maiuscole 
 
 //____________________________________________________________________________________________
 
 function superSumAll(array) {
-    
+
+    let sum = 0
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array[i].length; j++) {
+            const element = array[j];
+            sum += array [i][j]
+        }
+    }
+    return sum
 }
+
    console.log(superSumAll(testArray3));  ///  somma degli elementi dell'array  
 
 
 //_____________________________________________________________________________________________
 
 function divide(array, diveder){
+
 
 }
 
@@ -106,19 +115,30 @@ console.log(filterByMax(testArray1, 10));  /// clone con tutti i valori minori d
 
 
 //_____________________________________________________________________________________________
+/// array con i valori invertiti
 
 function reverse(array) {
-    
+
+let newArray5 = testArray1;
+let reverseArray5 = [];
+
+for(let i = newArray5.length -1; i >= 0; i--) {
+  reverseArray5.push(newArray5[i]);
+}
+console.log(reverseArray5);
 }
 
-console.log(reverse(testArray1));
- /// array con i valori invertiti
+ 
+
 console.log(reverse(testArray2));
 
 //_____________________________________________________________________________________________
 
 function flatArray(array) {
-    
+    const newArray6 = testArray3;
+    const flatArray = newArray6.flat();
+
+console.log(flatArray);
 }
 
-console.log(flatArray(testArray3));  /// tutti gli elementi in un solo array 
+/// tutti gli elementi in un solo array;
