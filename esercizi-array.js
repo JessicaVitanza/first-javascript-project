@@ -199,7 +199,7 @@ function isElementPositive(number) {
     }
 }
 
-console.log(testArray4.filter(isElementPositive));
+console.log("solo numeri positivi", testArray4.filter(isElementPositive));
 
 
 // filtrare testArray4 in modo che rimangano solo i numeri divisibili per 3
@@ -208,7 +208,7 @@ function isDivisibilePer3(number) {
     return number % 3 === 0;
 }
 
-console.log(testArray4.filter(isDivisibilePer3));
+console.log("solo numeri divisibili per 3", testArray4.filter(isDivisibilePer3));
 
 
 // filtrare testArray4 in modo che rimangano solo i numeri divisibili per 3 e 4
@@ -217,19 +217,10 @@ function isDivisibilePer3E4(number) {
     return number % 3 === 0 && number % 4 === 0;
 }
 
-console.log(testArray4.filter(isDivisibilePer3E4));
+console.log("numeri divisibili per 3 e per 4", testArray4.filter(isDivisibilePer3E4));
+
 
 // filtrare testArray5 in modo che rimangano solo le stringhe più corte di 6 lettere
-
-// function moreThan5Chars(array) {
-// const newArray3 = [];
-
-//     for (const element of array) {
-//         if (element.length > 5) {
-//             newArray3.push(element);
-//         }
-//     }
-//     return newArray3;
 
 function filter(testArray5) {
     const newArray = [];
@@ -250,30 +241,20 @@ function moreThan6Chars(stringa) {
     }
 }
 
-console.log(testArray5.filter(moreThan6Chars));
+console.log("stringhe più corte di 6 lettere", testArray5.filter(moreThan6Chars));
+
 
 // filtrare testArray5 in modo che rimangano solo le stringhe che contengono la lettera 'n'
 
 function containLetterN(stringa) {
-    const newArray = [];
-
-    if ( stringa === 'n') {
-        return true;
-    } 
+  
 }
 
-console.log(testArray5.filter(containLetterN));
 
 // filtrare testArray6 in modo che rimangano solo i numeri
 
 function filter(testArray6) {
-    const newArray = [];
-
-        for (let i = 0; i < array.length; i++) {
-            const element = array[i];
-           
-        }
-        return newArray;
+    
 } 
 
 
