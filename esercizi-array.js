@@ -246,27 +246,95 @@ console.log("stringhe più corte di 6 lettere", testArray5.filter(moreThan6Chars
 
 // filtrare testArray5 in modo che rimangano solo le stringhe che contengono la lettera 'n'
 
-function containLetterN(stringa) {
-  
+function containLetterN(element) {
+  if (element.includes('n'))
+  return element
 }
+
+console.log("stringhe che contengono 'n'", testArray5.filter(containLetterN));
+
 
 
 // filtrare testArray6 in modo che rimangano solo i numeri
 
-function filter(testArray6) {
-    
-} 
+function onlyNumbers(words, numbers) {
+
+       
+}   
+
+console.log("solo i numeri della dell'array", testArray6.filter(onlyNumbers));
+
 
 
 // mappare testArray4 dividendo tutti i numeri per 3
 
+function map(array, mappingFunction) {
+    const newArray= [];
+
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        const newElement = mappingFunction(element)
+        newArray.push(newElement);  
+    }
+    return newArray;
+}
+
+function divideFor3(number) {
+    return number / 3;
+}
+
+console.log("tutti i numeri divisi per 3", testArray4.map(divideFor3));
+
+
+
 // mappare testArray4 facendo la radice quadrata di tutti i numeri
+
+function radiceQuadrata(number) {
+    return Math.sqrt(number);
+}
+
+console.log("radice quadrata", testArray4.map(radiceQuadrata));
+
 
 // mappare testArray4 sommando uno solo ai numeri dispari
 
+function sumOneNumberToOdd(number) {
+    if (number % 2 === 1) 
+        return number + 1;
+}
+
+console.log("più 1 ai numeri dispari", testArray4.map(sumOneNumberToOdd));
+
+
+
 // mappare testArray5 rendendo maiuscole la prima e l'ultima lettera di ogni parola
 
+function map(array, mappingFunction) {
+    const newArray= [];
+
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        const newElement = mappingFunction(element)
+        newArray.push(newElement);  
+    }
+    return newArray;
+}
+
+function firstUpperCase(element) {
+    return element.charAt(0).toUpperCase(1) + element.slice(1)
+}
+
+console.log("prima lettera maiuscola", testArray5.map(firstUpperCase));
+
+
 // mappare testArray5 aggiungendo in fondo ad ogni stringa la lunghezza della stessa
+
+function lengthStringaAtEndOfStringa(element) {
+    return element + element.length
+
+}
+
+console.log("lunghezza di ogni stringa", testArray5.map(lengthStringaAtEndOfStringa));
 
 
 
