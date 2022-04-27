@@ -158,8 +158,8 @@ function flatArray(array) {
      for (let i = 0; i < array.length; i++) {
          const row = array[i];
      for (let j = 0; j < row.length; j++) {
-             const element = row[j];
-             newArray.push(element)
+         const element = row[j];
+         newArray.push(element)
      }  
      }
      return newArray
