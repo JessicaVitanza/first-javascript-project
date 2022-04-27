@@ -16,38 +16,36 @@ const testArray3 = [[1, 4, 8, 12],
 
 
 function min(array) {
-    let selectedElement = [0];
+    let number = [0];
 
     for (const element of array) {
-        if (selectedElement > element) {
-            selectedElement = element;
+        if (number > element) {
+            number = element;
             
         }
     }
-    return selectedElement;
+    return number;
 }                    
-  console.log(min(testArray1)); /// -123
+  console.log("min", min(testArray1)); /// -123
 
 //___________________________________________________________________________________________
 
 function sumEven(array) {
-    const newArray = []
+    
     let risultato = 0
     for (let i = 0; i < array.length; i++) {
         const element = array[i];
-                
-        if (element % 2 === 0) {
-        newArray.push (element);
-        }
-        }
+            
+        const elementEven = element % 2 === 0;
 
-    for (let i = 0; i < newArray.length; i++) {
-        const element = newArray[i];
+        if (elementEven) {
         risultato = risultato + element;
-    }
+        }
+        }
+        
     return risultato
 }
-   console.log(sumEven(testArray1)); /// 200008
+   console.log("sumEven", sumEven(testArray1)); /// 200008
 
 //____________________________________________________________________________________________
 
@@ -55,90 +53,116 @@ function moreThan5Chars(array) {
 const newArray3 = [];
 
     for (const element of array) {
-        const moreThan5CharsElement = element.length > 5 ;
-        if (moreThan5CharsElement) {
+        if (element.length > 5) {
             newArray3.push(element);
         }
     }
     return newArray3;
 }   
-   console.log(moreThan5Chars(testArray2));  ///  giallo, arancione, magenta
+   console.log("moreThan5Chars", moreThan5Chars(testArray2));  ///  giallo, arancione, magenta
 
 //____________________________________________________________________________________________
 
 function firstUpperCase(array) { 
-    let newArray = []
-    for (const string of array) {
-        newArray.push(string.charAt(0).toUpperCase() + string.slice(1))
+    const newArray = []
+
+    for (const element of array) {
+        newArray.push(element.charAt(0).toUpperCase() + element.slice(1))
     }
     return newArray
 }
 
-   console.log(firstUpperCase(testArray2));  ///  tutte le iniziali maiuscole 
+   console.log("firstUpperCase", firstUpperCase(testArray2));  ///  tutte le iniziali maiuscole 
 
 //____________________________________________________________________________________________
 
 function superSumAll(array) {
 
-    let sum = 0
+    let result = 0
+
     for (let i = 0; i < array.length; i++) {
-        for (let j = 0; j < array[i].length; j++) {
-            const element = array[j];
-            sum += array [i][j]
+        const riga = array [i];
+        for (let j = 0; j < riga.length; j++) {
+            const element = riga[j];
+            result = result + element;
         }
-    }
-    return sum
+    } 
+    return result;
 }
 
-   console.log(superSumAll(testArray3));  ///  somma degli elementi dell'array  
+   console.log("superSumAll", superSumAll(testArray3));  ///  somma degli elementi dell'array  
 
 
 //_____________________________________________________________________________________________
 
-function divide(array, diveder){
+function divide(array, divider = 2){
 
+    const newArray = [];
 
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        const newElement = element / divider;
+        newArray.push(newElement);
+    }
+    return newArray
 }
 
-console.log(divide(testArray1, 3));  /// un clone con tutti i valori diviso 3
+console.log("divide", divide(testArray1, 3));  /// un clone con tutti i valori diviso 3
 
-console.log(divide(testArray1)); /// un clone con tutti i valori diviso 2
+console.log("divide", divide(testArray1)); /// un clone con tutti i valori diviso 2
 
 //_____________________________________________________________________________________________
 
 
 function filterByMax(array, max) {
     
+    const newArray = [];
+
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+      if (element < max) {
+        newArray.push(element)
+    }
+}
+        return newArray
 }
 
-console.log(filterByMax(testArray1, 10));  /// clone con tutti i valori minori di 10
+console.log("filterByMax", filterByMax(testArray1, 10));  /// clone con tutti i valori minori di 10
 
 
 //_____________________________________________________________________________________________
-/// array con i valori invertiti
+
 
 function reverse(array) {
 
-let newArray5 = testArray1;
-let reverseArray5 = [];
+const newArray = [];
 
-for(let i = newArray5.length -1; i >= 0; i--) {
-  reverseArray5.push(newArray5[i]);
+for(let i = array.length -1; i >= 0; i--) {
+    const element = array[i];
+    newArray.push(element);
 }
-console.log(reverseArray5);
+return newArray;
+
 }
 
  
 
-console.log(reverse(testArray2));
+console.log("reverse", reverse(testArray1));  /// array con i valori invertiti
+console.log("reverse", reverse(testArray2));
 
 //_____________________________________________________________________________________________
 
 function flatArray(array) {
-    const newArray6 = testArray3;
-    const flatArray = newArray6.flat();
+     const newArray= [];
 
-console.log(flatArray);
+     for (let i = 0; i < array.length; i++) {
+         const row = array[i];
+     for (let j = 0; j < row.length; j++) {
+             const element = row[j];
+             newArray.push(element)
+     }  
+     }
+     return newArray
 }
 
-/// tutti gli elementi in un solo array;
+console.log("flatArray", flatArray(testArray3));  /// tutti gli elementi in un solo array;
