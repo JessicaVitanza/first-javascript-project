@@ -131,9 +131,9 @@ const arrayOfNumbers = [1, 5, 3, 8, 6];
 //_______________________________________________________________________________________________
 
 
-const arrayOfArray = [[2, 6, 4], 
-                      [8, 5, 1], 
-                      [9, 3, 6]];
+// const arrayOfArray = [[2, 6, 4], 
+//                       [8, 5, 1], 
+//                       [9, 3, 6]];
 
 // for (let i = 0; i < arrayOfArray.length; i++) {
 //     const riga = arrayOfArray[i];
@@ -146,32 +146,152 @@ const arrayOfArray = [[2, 6, 4],
 //_________________________________________________________________________________________________
 // clonare e aggingere 1 ad ogni elemnto
 
-console.log(arrayOfArray);
+// console.log(arrayOfArray);
 
-function cloneAndAddOneBidimentional(array) {
-    const newArray = [];
+// function cloneAndAddOneBidimentional(array) {
+//     const newArray = [];
 
-    for (const riga of array) {
+//     for (const riga of array) {
         
-        const newRiga = [];
+//         const newRiga = [];
     
-        for (const cella of riga) {
+//         for (const cella of riga) {
             
-           const cellaPlusOne = cella + 1;
-           newRiga.push(cellaPlusOne); 
-        }
+//            const cellaPlusOne = cella + 1;
+//            newRiga.push(cellaPlusOne); 
+//         }
 
-        newArray.push(newRiga);
+//         newArray.push(newRiga);
+//     }
+//         return newArray;
+// }
+//   console.log(cloneAndAddOneBidimentional(arrayOfArray));
+
+//_____________________funzioni di filtraggio_________________________________________________________
+
+const testArray = [2, 6, 8, 7, 21, 2001, 5000, 3, 12];
+
+// function keepEven(array) {
+//    const newArray = [];
+   
+//    for (let i = 0; i < array.length; i++) {
+//        const element = array[i];
+//        if (element % 2 === 0) {
+//            newArray.push(element);
+//        }
+//    }
+//    return newArray;
+// }
+
+// console.log(keepEven(testArray));
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// function keepGreaterThan10(array) {
+//     const newArray = [];
+
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
+
+//         if (element > 10) {
+//         newArray.push(element)
+//         }  
+//     }
+//     return newArray
+// }
+
+// console.log(keepGreaterThan10(testArray));
+
+//- - - - - - - - - - - - - - - - - - - - - - - - - - -
+// funzione di ordine superiore con array
+
+
+// function filter(array, filterFunction) {
+//     const newArray = [];
+
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
+//         const isElementToAdd = filterFunction(element);
+//       if (isElementToAdd) {
+//         newArray.push(element);
+//       }
+//     }
+//     return newArray;
+// }
+
+// function isEven(number) {
+//     if (number % 2 === 0) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// function isGreaterThan10(number) {
+//     return number > 10;
+// }
+
+// function isSmallerThan10(number) {
+//     return number < 10
+// }
+
+// // console.log(filter(testArray, isEven));  
+// console.log (testArray.filter(isEven));
+
+// // console.log(filter(testArray,isGreaterThan10));  
+// console.log (testArray.filter(isGreaterThan10));
+
+// // console.log(filter(testArray,isSmallerThan10));  
+// console.log (testArray.filter(isSmallerThan10));
+
+// // console.log(filter(testArray, (number) => number % 2 === 1));
+// console.log(testArray.filter((number) => number % 2 === 1));
+
+
+//____________________mapping__________________________
+
+
+// function addOneToAllElements(array) {
+//     const newArray= [];
+
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
+//         const newElement = element + 1;
+//         newArray.push(newElement);  
+//     }
+//     return newArray;
+// }
+
+// console.log(addOneToAllElements(testArray));
+
+// - - - - - - - - - - - - - - - - - - - - - - - -
+
+function map(array, mappingFunction) {
+    const newArray= [];
+
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        const newElement = mappingFunction(element)
+        newArray.push(newElement);  
     }
-        return newArray;
+    return newArray;
 }
-  console.log(cloneAndAddOneBidimentional(arrayOfArray));
-
-//__________________________________________________________________________________________________
 
 
+function addOne(element) {
+    return element + 1;
+}
 
 
+function divide(element) {
+    return element / 2;
+}
 
+// console.log(map(testArray, divide));
+console.log(testArray.map(addOne));
 
+// console.log(map(testArray, addOne));
+console.log(testArray.map(divide));
 
+// console.log(map(testArray, (element) => element**2));
+console.log(testArray.map((element) => element **2));
