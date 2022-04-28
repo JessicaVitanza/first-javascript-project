@@ -295,3 +295,5 @@ console.log(testArray.map(divide));
 
 // console.log(map(testArray, (element) => element**2));
 console.log(testArray.map((element) => element **2));
+
+//_________________________________________________________________________________________________
