@@ -257,8 +257,8 @@ console.log("stringhe che contengono 'n'", testArray5.filter(containLetterN));
 
 // filtrare testArray6 in modo che rimangano solo i numeri
 
-function onlyNumbers(words, numbers) {
-
+function onlyNumbers(something) {
+    return typeof(something) === 'number';
        
 }   
 
@@ -320,17 +320,17 @@ function map(array, mappingFunction) {
     return newArray;
 }
 
-function firstUpperCase(element) {
-    return element.charAt(0).toUpperCase(1) + element.slice(1)
+function firstUpperCase(word) {
+    return word[0].toUpperCase() + word.slice(1,word.length-1) + word[word.length-1].toUpperCase();
 }
 
-console.log("prima lettera maiuscola", testArray5.map(firstUpperCase));
+console.log("la prima e l'ultima lettera maiuscola", testArray5.map(firstUpperCase));
 
 
 // mappare testArray5 aggiungendo in fondo ad ogni stringa la lunghezza della stessa
 
 function lengthStringaAtEndOfStringa(element) {
-    return element + element.length
+    return element + " " + element.length
 
 }
 
