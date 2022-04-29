@@ -297,7 +297,7 @@ console.log(testArray.map(divide));
 console.log(testArray.map((element) => element **2));
 
 //_________________________________________________________________________________________________
-
+// sortin fuction 
 
 function compareNumber(el1, el2) {
 
