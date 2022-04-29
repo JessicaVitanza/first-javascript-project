@@ -297,3 +297,49 @@ console.log(testArray.map(divide));
 console.log(testArray.map((element) => element **2));
 
 //_________________________________________________________________________________________________
+
+
+function compareNumber(el1, el2) {
+
+    if (el1 > el2) {
+        return 1;
+    } else if (el1 < el2){
+        return -1;
+    } else {
+        return 0
+    }
+    
+}
+
+function compareNUmber2(el1, el2) { //SORTIN FUNCTION PER I NUMERI
+    return el1 - el2;
+}
+
+function compareString(el1, el2) {
+   return el1.localeCompare(el2);
+}
+
+function compareStringByLength(el1, el2) {
+    return el1.length - el2.length;
+}
+
+const arrayOfNumbers = [1, 5, 3, 8, 6];
+
+
+
+
+arrayOfNumbers.sort(compareNumber);
+
+console.log(compareNUmber2);
+
+const arrayOfStrings = ['balcone', 'aritmetica', 'giallo', 'zuzzurellone'];
+
+arrayOfStrings.sort(compareStringByLength);
+
+console.log(arrayOfStrings);
+
+const testArray4 = [2, 4, 7, -9, 1000, -45, 2, 12, 333, -1000, 123, 34];
+
+testArray4.sort(compareNUmber2);
+
+console.log(testArray4);
