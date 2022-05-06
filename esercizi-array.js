@@ -7,8 +7,8 @@
 
 // //____________________________________________________________________________
 
-// const testArray3 = [[1, 4, 8, 12], 
-//                     [34, 2.1, -23, 4], 
+// const testArray3 = [[1, 4, 8, 12],
+//                     [34, 2.1, -23, 4],
 //                     [1.1, -2000, 2, 88]];
 
 
@@ -21,28 +21,28 @@
 //     for (const element of array) {
 //         if (number > element) {
 //             number = element;
-            
+
 //         }
 //     }
 //     return number;
-// }                    
+// }
 //   console.log("min", min(testArray1)); /// -123
 
 // //___________________________________________________________________________________________
 
 // function sumEven(array) {
-    
+
 //     let risultato = 0
 //     for (let i = 0; i < array.length; i++) {
 //         const element = array[i];
-            
+
 //         const elementEven = element % 2 === 0;
 
 //         if (elementEven) {
 //         risultato = risultato + element;
 //         }
 //         }
-        
+
 //     return risultato
 // }
 //    console.log("sumEven", sumEven(testArray1)); /// 200008
@@ -58,12 +58,12 @@
 //         }
 //     }
 //     return newArray3;
-// }   
+// }
 //    console.log("moreThan5Chars", moreThan5Chars(testArray2));  ///  giallo, arancione, magenta
 
 // //____________________________________________________________________________________________
 
-// function firstUpperCase(array) { 
+// function firstUpperCase(array) {
 //     const newArray = []
 
 //     for (const element of array) {
@@ -72,7 +72,7 @@
 //     return newArray
 // }
 
-//    console.log("firstUpperCase", firstUpperCase(testArray2));  ///  tutte le iniziali maiuscole 
+//    console.log("firstUpperCase", firstUpperCase(testArray2));  ///  tutte le iniziali maiuscole
 
 // //____________________________________________________________________________________________
 
@@ -86,11 +86,11 @@
 //             const element = riga[j];
 //             result = result + element;
 //         }
-//     } 
+//     }
 //     return result;
 // }
 
-//    console.log("superSumAll", superSumAll(testArray3));  ///  somma degli elementi dell'array  
+//    console.log("superSumAll", superSumAll(testArray3));  ///  somma degli elementi dell'array
 
 
 // //_____________________________________________________________________________________________
@@ -115,7 +115,7 @@
 
 
 // function filterByMax(array, max) {
-    
+
 //     const newArray = [];
 
 //     for (let i = 0; i < array.length; i++) {
@@ -145,7 +145,7 @@
 
 // }
 
- 
+
 
 // console.log("reverse", reverse(testArray1));  /// array con i valori invertiti
 // console.log("reverse", reverse(testArray2));
@@ -160,7 +160,7 @@
 //      for (let j = 0; j < row.length; j++) {
 //          const element = row[j];
 //          newArray.push(element)
-//      }  
+//      }
 //      }
 //      return newArray
 // }
@@ -191,7 +191,7 @@ const testArray4 = [2, 4, 7, -9, 1000, 45, 2, 12, 333, -1000, 123, 34];
 //           }
 //         }
 //         return newArray;
-// }   
+// }
 
 // function isElementPositive(number) {
 //     if (number > 0) {
@@ -233,7 +233,7 @@ const testArray4 = [2, 4, 7, -9, 1000, 45, 2, 12, 333, -1000, 123, 34];
 //           }
 //         }
 //         return newArray;
-// } 
+// }
 
 // function moreThan6Chars(stringa) {
 //     if (stringa.length < 6) {
@@ -259,8 +259,8 @@ const testArray4 = [2, 4, 7, -9, 1000, 45, 2, 12, 333, -1000, 123, 34];
 
 // function onlyNumbers(something) {
 //     return typeof(something) === 'number';
-       
-// }   
+
+// }
 
 // console.log("solo i numeri della dell'array", testArray6.filter(onlyNumbers));
 
@@ -274,7 +274,7 @@ const testArray4 = [2, 4, 7, -9, 1000, 45, 2, 12, 333, -1000, 123, 34];
 //     for (let i = 0; i < array.length; i++) {
 //         const element = array[i];
 //         const newElement = mappingFunction(element)
-//         newArray.push(newElement);  
+//         newArray.push(newElement);
 //     }
 //     return newArray;
 // }
@@ -299,7 +299,7 @@ const testArray4 = [2, 4, 7, -9, 1000, 45, 2, 12, 333, -1000, 123, 34];
 // // mappare testArray4 sommando uno solo ai numeri dispari
 
 // function sumOneNumberToOdd(number) {
-//     if (number % 2 === 1) 
+//     if (number % 2 === 1)
 //         return number + 1;
 // }
 
@@ -315,7 +315,7 @@ const testArray4 = [2, 4, 7, -9, 1000, 45, 2, 12, 333, -1000, 123, 34];
 //     for (let i = 0; i < array.length; i++) {
 //         const element = array[i];
 //         const newElement = mappingFunction(element)
-//         newArray.push(newElement);  
+//         newArray.push(newElement);
 //     }
 //     return newArray;
 // }
@@ -359,7 +359,7 @@ const testArray4 = [2, 4, 7, -9, 1000, 45, 2, 12, 333, -1000, 123, 34];
 
 
 // function addNext(element, index, array) {
-  
+
 //   const nextIndex = index + 1;
 
 //   if(nextIndex < array.length){
@@ -373,88 +373,105 @@ const testArray4 = [2, 4, 7, -9, 1000, 45, 2, 12, 333, -1000, 123, 34];
 // }
 
 // console.log('add next', testArray4.map(addNext))
-console.log('add next lambda', testArray4.map((e, i, a) => (i + 1 < a.length) ? e + a[i+1] : e ));
+// console.log('add next lambda', testArray4.map((e, i, a) => (i + 1 < a.length) ? e + a[i+1] : e ));
 
 
-//__________________________________________________________________________________________
-// reducing
+// //__________________________________________________________________________________________
+// // reducing
 
 
-function sumAll(array){
+// function sumAll(array){
 
-  let result = array[0];
+//   let result = array[0];
 
-  for (let i = 1; i < array.length; i++) {
-    const element = array[i];
+//   for (let i = 1; i < array.length; i++) {
+//     const element = array[i];
 
-    result = result + element;
+//     result = result + element;
 
-  }
-  return result;
-}
+//   }
+//   return result;
+// }
 
-function multiplyAll(array){
+// function multiplyAll(array){
 
-    let result = 1;
+//     let result = 1;
 
-    for (let i = 0; i < array.length; i++) {
-      const element = array[i];
+//     for (let i = 0; i < array.length; i++) {
+//       const element = array[i];
 
-      result = result * element;
-    }
-    return result;
-}
+//       result = result * element;
+//     }
+//     return result;
+// }
 
-console.log('somma tutti', sumAll(testArray4));
-
-
-const test = [3, 1, 5];
-
-function reducerSumAll(previous, current) {
-  const result = previous + current;
-  return result;
-}
-
-function reducerMultiplyAll(previous, current){
-  const result = previous * current;
-  return result;
-}
-
-console.log('somma tutti reduce', test.reduce(reducerSumAll, 0));
-console.log('somma tutti lambda', test.reduce((p, c) => p + c, 0))
-console.log("moltiplica tutti reduce", test.reduce(reducerMultiplyAll, 1));
-console.log("moltiplica tutti lambda",test.reduce((p, c) => p * c, 1));
+// console.log('somma tutti', sumAll(testArray4));
 
 
-function reduceHigherThan2(previous, current){
-  if(current > 2){
-    previous.push(current);
-  }
-  return previous;
-}
+// const test = [3, 1, 5];
 
-function filterHigherThan2(element) {
-  if (element > 2) {
-    return true;
+// function reducerSumAll(previous, current) {
+//   const result = previous + current;
+//   return result;
+// }
+
+// function reducerMultiplyAll(previous, current){
+//   const result = previous * current;
+//   return result;
+// }
+
+// console.log('somma tutti reduce', test.reduce(reducerSumAll, 0));
+// console.log('somma tutti lambda', test.reduce((p, c) => p + c, 0))
+// console.log("moltiplica tutti reduce", test.reduce(reducerMultiplyAll, 1));
+// console.log("moltiplica tutti lambda",test.reduce((p, c) => p * c, 1));
+
+
+// function reduceHigherThan2(previous, current){
+//   if(current > 2){
+//     previous.push(current);
+//   }
+//   return previous;
+// }
+
+// function filterHigherThan2(element) {
+//   if (element > 2) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log('filtra con reduce', test.reduce(reduceHigherThan2, []));
+// console.log("filtra con filter", test.filter(filterHigherThan2));
+
+
+// function reducerSumAllEvenIndex(previous, current, index){
+//   if (index % 2 === 0) {
+//     const result = previous + current;
+//     return result;
+//   } else {
+//     return previous;
+//   }
+// }
+
+// console.log("somma indice pari", test.reduce(reducerSumAllEvenIndex, 0));
+
+
+
+
+
+const arrayOfNumbers = [23, 13, 34, 56, 99, 101];
+
+for (let i = 0; i < arrayOfNumbers.length; i++) {
+  const element = arrayOfNumbers[i];
+
+  if (56 === true) {
+    return 56;
   } else {
     return false;
   }
+  
 }
-
-console.log('filtra con reduce', test.reduce(reduceHigherThan2, []));
-console.log("filtra con filter", test.filter(filterHigherThan2));
-
-
-function reducerSumAllEvenIndex(previous, current, index){
-  if (index % 2 === 0) {
-    const result = previous + current;
-    return result;
-  } else {
-    return previous;
-  }
-}
-
-console.log("somma indice pari", test.reduce(reducerSumAllEvenIndex, 0));
 
 
 

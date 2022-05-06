@@ -1,5 +1,5 @@
 
-const arrayOfNumbers = [1, 5, 3, 8, 6];
+// const arrayOfNumbers = [1, 5, 3, 8, 6];
 
 // arrayOfNumbers.push(9);
 
@@ -266,80 +266,85 @@ const testArray = [2, 6, 8, 7, 21, 2001, 5000, 3, 12];
 
 // - - - - - - - - - - - - - - - - - - - - - - - -
 
-function map(array, mappingFunction) {
-    const newArray= [];
+// function map(array, mappingFunction) {
+//     const newArray= [];
 
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
-        const newElement = mappingFunction(element)
-        newArray.push(newElement);  
-    }
-    return newArray;
-}
-
-
-function addOne(element) {
-    return element + 1;
-}
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
+//         const newElement = mappingFunction(element)
+//         newArray.push(newElement);  
+//     }
+//     return newArray;
+// }
 
 
-function divide(element) {
-    return element / 2;
-}
+// function addOne(element) {
+//     return element + 1;
+// }
 
-// console.log(map(testArray, divide));
-console.log(testArray.map(addOne));
 
-// console.log(map(testArray, addOne));
-console.log(testArray.map(divide));
+// function divide(element) {
+//     return element / 2;
+// }
 
-// console.log(map(testArray, (element) => element**2));
-console.log(testArray.map((element) => element **2));
+// // console.log(map(testArray, divide));
+// console.log(testArray.map(addOne));
 
-//_________________________________________________________________________________________________
-// sortin fuction 
+// // console.log(map(testArray, addOne));
+// console.log(testArray.map(divide));
 
-function compareNumber(el1, el2) {
+// // console.log(map(testArray, (element) => element**2));
+// console.log(testArray.map((element) => element **2));
 
-    if (el1 > el2) {
-        return 1;
-    } else if (el1 < el2){
-        return -1;
-    } else {
-        return 0
-    }
+// //_________________________________________________________________________________________________
+// // sortin fuction 
+
+// function compareNumber(el1, el2) {
+
+//     if (el1 > el2) {
+//         return 1;
+//     } else if (el1 < el2){
+//         return -1;
+//     } else {
+//         return 0
+//     }
     
-}
+// }
 
-function compareNUmber2(el1, el2) { //SORTIN FUNCTION PER I NUMERI
-    return el1 - el2;
-}
+// function compareNUmber2(el1, el2) { //SORTIN FUNCTION PER I NUMERI
+//     return el1 - el2;
+// }
 
-function compareString(el1, el2) {
-   return el1.localeCompare(el2);
-}
+// function compareString(el1, el2) {
+//    return el1.localeCompare(el2);
+// }
 
-function compareStringByLength(el1, el2) {
-    return el1.length - el2.length;
-}
+// function compareStringByLength(el1, el2) {
+//     return el1.length - el2.length;
+// }
 
-const arrayOfNumbers = [1, 5, 3, 8, 6];
-
-
+// const arrayOfNumbers = [1, 5, 3, 8, 6];
 
 
-arrayOfNumbers.sort(compareNumber);
 
-console.log(compareNUmber2);
 
-const arrayOfStrings = ['balcone', 'aritmetica', 'giallo', 'zuzzurellone'];
+// arrayOfNumbers.sort(compareNumber);
 
-arrayOfStrings.sort(compareStringByLength);
+// console.log(compareNUmber2);
 
-console.log(arrayOfStrings);
+// const arrayOfStrings = ['balcone', 'aritmetica', 'giallo', 'zuzzurellone'];
 
-const testArray4 = [2, 4, 7, -9, 1000, -45, 2, 12, 333, -1000, 123, 34];
+// arrayOfStrings.sort(compareStringByLength);
 
-testArray4.sort(compareNUmber2);
+// console.log(arrayOfStrings);
 
-console.log(testArray4);
+// const testArray4 = [2, 4, 7, -9, 1000, -45, 2, 12, 333, -1000, 123, 34];
+
+// testArray4.sort(compareNUmber2);
+
+// console.log(testArray4);
+
+//_______________________________________________________
+
+
+
