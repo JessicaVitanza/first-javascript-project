@@ -460,23 +460,5 @@ const testArray4 = [2, 4, 7, -9, 1000, 45, 2, 12, 333, -1000, 123, 34];
 
 
 
-const arrayOfNumbers = [23, 13, 34, 56, 99, 101];
-
-for (let i = 0; i < arrayOfNumbers.length; i++) {
-  const element = arrayOfNumbers[i];
-
-  if (56 === true) {
-    return 56;
-  } else {
-    return false;
-  }
-  
-}
-
-
-
-
-
-
 
 
